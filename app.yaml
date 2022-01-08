@@ -1,6 +1,7 @@
 # [START app_yaml]
 runtime: nodejs
 env: flex
+
+## Uncomment for Cloud SQL
 beta_settings:
-cloud_sql_instances: cnsadb
-# [END app_yaml]
+  cloud_sql_instances: "cnsadb"
