@@ -1,7 +1,7 @@
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
-  user: "fabian",
+  user: "postgres",
   password: "CNSA2020",
   host: "/cloudsql/cnsa-server:northamerica-northeast1:cnsadb",
   // port: process.env.DB_PORT,
