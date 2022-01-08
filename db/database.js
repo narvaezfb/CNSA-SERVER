@@ -3,7 +3,7 @@ const Pool = require("pg").Pool;
 const pool = new Pool({
   user: "fabian",
   password: "CNSA2020",
-  host: "/cloudsql/cnsadb",
+  host: "/cloudsql/cnsa-server:northamerica-northeast1:cnsadb",
   // port: process.env.DB_PORT,
   database: "cnsadb",
   connector: "postgresql",
