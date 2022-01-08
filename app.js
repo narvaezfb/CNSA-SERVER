@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 const pool = require("./db/database");
@@ -24,6 +25,14 @@ const totalGamesRouter = require("./Routes/totalGamesRoutes");
 const gameStatistics = require("./Routes/gameStatistics");
 const playerStatisticsRouter = require("./Routes/playerStatisticsRoutes");
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -39,7 +48,7 @@ app.use("/cnsa/v1/schools", schoolRouter);
 app.use("/cnsa/v1/locations", locationRouter);
 app.use("/cnsa/v1/provinces", provinceRouter);
 app.use("/cnsa/v1/stadiums", stadiumRouter);
-app.use("/cnsa/v1/games", gameRouter); 
+app.use("/cnsa/v1/games", gameRouter);
 app.use("/cnsa/v1/gameTypes", gameTypeRouter);
 
 app.use("/cnsa/v1/scholarships", scholarshipRouter);
