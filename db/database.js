@@ -10,7 +10,7 @@ const Pool = require("pg").Pool;
 
 const pool = {
   yourdbname: {
-    host: "/cloudsql/[cnsadb]",
+    host: "/cloudsql/cnsadb",
     database: "cnsadb", // Create at step 3
     password: "CNSA2020",
     user: "fabian",
