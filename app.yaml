@@ -1,4 +1,6 @@
 # [START app_yaml]
 runtime: nodejs
 env: flex
+beta_settings:
+cloud_sql_instances: [cnsadb]
 # [END app_yaml]
